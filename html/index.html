@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Guram Khasia">
+
+  <link rel="icon" href="../img/tabIcon.PNG">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+  <title>Hotel</title>
+</head>
+
+<body>
+
+  <main class="container">
+    <header class="mg">
+      <nav class="navbar">
+        <div class="toggle">
+          <i class="fa fa-bars" aria-hidden="true" onclick="toggle()"></i>
+        </div>
+        <ul class="show">
+          <li><a href="#">უპირატესობები</a></li>
+          <li><a href="#">ფუნქციონალი</a></li>
+          <li><a href="#">ფასები</a></li>
+          <li><a href="#">დაგვიკავშირდით</a></li>
+        </ul>
+      </nav>
+      <div>
+        <img src="../img/logo.PNG" alt="logo" id="logo">
+        <h2>hotel</h2>
+        <p>ხელმისაწვდომი ვებ გვერდები ჯავშნების სისტემით</p>
+      </div>
+    </header>
+
+
+    <script>
+
+      const toggle = () => {
+        var x = document.querySelector('.navbar ul');
+        if(x.className === "hide"){
+          x.classList.remove('hide');
+          x.className += "show";
+  
+        }
+  
+        else {
+          x.className = 'hide';
+        }
+      }     
+  
+        
+    </script>
+
+
+    <section id="priceSection" class="mg">
+        <div>
+            <img src="../img/iogaMan.PNG" alt="ioga man">
+        </div>
+      <div class="mg">
+        <h2 class="mgb">სასტუმროს ვებ გვერდი ჯავშნების სისტემით</h2>
+
+        <p>ხარისხიანი ვებ გვერდის შექმნა მსოფლიოში საკმაოდ ძვირი სიამოვნებაა, სწორედ ამიტომ ჩვენ გადავწყვიტეთ შეგვექმნა
+          პროდუქტი რომელიც იქნებოდა ხელმისაწვდომი ნებისმიერი სასტუმროსთვის. ვებ გვერდი რომელიც სრულად უპასუხებს
+          ნებისმიერი
+          სასტუმროს მოთხოვნებს და არის ხელმისაწვდომი</p>
+
+        <button class="mgt mgb">დაგვიკავშირდით</button>
+
+        <p onload="addLinks()">ან გაიგეთ მეტი <a class="dynamicLinkTag">ფუნქციონალის</a> ან <a class="dynamicLinkTag">უპირატესობების</a>
+          შესახებ</p>
+
+        <script>
+          window.onload = function(){
+            if(window.screen.availWidth < 768){
+              console.log("ეკრანის ზომა ნაკლებია 768 პიქსელზე");
+            const tags = document.querySelectorAll('p .dynamicLinkTag');
+            console.log(tags);
+
+             tags[0].setAttribute("href","#functionalSection");
+             tags[1].setAttribute("href",'#benefitSection');
+             }
+          
+          }
+            
+          
+        </script>
+
+      </div>
+     
+      
+    </section>
+
+    <section id="benefitSection">
+      <div>
+        <img src="../img/gadgets.PNG" alt="gadgets">
+      </div>
+      <article>
+        <div>
+          <h2>ჩვენი უპირატესობებია</h2>
+          <ul>
+            <li>ინტეგრირებული ჯავშნის სისტემა Booking.com, AirBnb,Hotels.com,Tripadvisor</li>
+            <li>Online და Offline გადახდა ჯავშნისას</li>
+            <li>თანხის აღება დამატებითი საკომისიოს გარეშე</li>
+            <li>ფასების პოლიტიკის განსაზღვრა</li>
+            <li>ვებ გვერდი სრულდება 2 კვირაში</li>
+            <li>დამატებითი სერვისები</li>
+            <li>რამოდენიმე ოთახის დაჯავშნა</li>
+            <li>შეტყობინებების სისტემა</li>
+          </ul>
+        </div>
+
+      </article>
+    </section>
+
+    <section id="functionalSection">
+
+      <article>
+        <h2>სისტემის ფუნქციონალი</h2>
+        <ul>
+          <li>საძიებო სისტემაზე მორგებული ვებ გვერდი</li>
+          <li>ფოტო და ვიდეო გალერეა</li>
+          <li>ინტეგრირება სოც ქსელებთან</li>
+          <li>გამართული ONLINE გადასახადები</li>
+          <li>მულტი ენის ფუნქციონალი</li>
+          <li>პრომო აქციები და ფასდაკლებები</li>
+          <li>RE-მარკეტინგი</li>
+          <li>მობილურზე მორგებული ვებ გვერდი</li>
+          <li>მომხმარებლის კაბინეტი</li>
+          <li>სერვისები</li>
+        </ul>
+      </article>
+
+      <img src="../img/peopleAndDog.PNG" alt="peopleAndDog">
+    </section>
+
+    <section id="contactUsSection">
+      <div>
+        <form>
+          <h2>ან დაგვიტოვეთ თქვენი ნომერი და ჩვენ დაგირეკავთ</h2>
+          <input type="text" id="nameInput" placeholder="თქვენი სახელი">
+          <input type="tel" id="phoneInput" placeholder="თქვენი მობილურის ნომერი">
+          <input type="button" value="დამირეკეთ">
+        </form>
+      </div>
+
+      <article id="contactInfo">
+        <h1>დაგვიკავშირდით</h1>
+        <p><span>შპს "ონლაინ სისტემსი"</span></p>
+        <p><span>ტელ: +995 595 31 77 75</span></p>
+        <p><span>ელ-ფოსტა: info@helloworld.com </span></p>
+        <p><span>მისამართი ინოვაციების ქ. #7, თბილისი, საქართველო</span></p>
+      </article>
+
+    </section>
+
+
+  </main>
+
+  <footer>
+    <img src="../img/footerLogo.PNG" alt="logo">
+    <nav id="footerNavbar">
+      <div class="toggle">
+        <i class="fa fa-bars" aria-hidden="true" onclick="toggleBottomNav()"></i>
+      </div>
+
+
+      <ul class="show">
+        <li> <a href="#">უპირატესობები</a> </li>
+        <li> <a href="#">ფუნქციონალი</a> </li>
+        <li> <a href="#">ფასები</a> </li>
+        <li> <a href="#">დაგვიკავშირდით</a> </li>
+      </ul>
+
+      
+      <script>
+          const toggleBottomNav = () => {
+          var x = document.querySelector('#footerNavbar ul');
+          if(x.className === "hide"){
+            x.classList.remove('hide');
+            x.className += "show";
+    
+          }
+    
+          else {
+            x.className = 'hide';
+          }
+        }    
+        </script>
+        
+    </nav>
+
+  </footer>
+
+</body>
+
+</html>
